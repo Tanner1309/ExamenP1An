@@ -40,7 +40,12 @@ x=vecE.size
 vecX=np.arange(0,x)
 print("El resultado mas cercano es:",xr)
 #se hace la grafica
-plt.plot(vecX,vecE,"r--")
-plt.plot(vecX,vecXr,"b--")
+plt.figure()
+plt.subplot(2,1,1)
+plt.plot(vecX,vecE, "go--", linewidth=2, markersize=5)
+plt.title("$Error$")
+plt.subplot(2,1,2)
+plt.plot(vecX,vecXr, "bo-", linewidth=2, markersize=5)
+plt.title("$Resultados$")
 #se muestra la grafica
 plt.show()
